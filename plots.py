@@ -28,18 +28,30 @@ for item in data["benchmarks"]:
         cpu_times_mergesort.append(cpu_time)
     
 
-# plotting the results of both algorithms
-
+# plotting the results of bruteforce
 plt.figure(figsize=(8,6),facecolor='paleturquoise')
-plt.plot(input_sizes_bruteforce,np.array(cpu_times_bruteforce)/1e9, 'go-')
+plt.plot(input_sizes_bruteforce,np.array(cpu_times_bruteforce)/1e9, 'go-', label = "BruteForce")
 plt.xlabel("Number of Nodes")
 plt.ylabel("Time (seconds)")
 plt.title("Brute Force Sorting on Singly Linked List")
 plt.grid(True)
+plt.legend()
 
 plt.savefig("benchmark_plot_bruteforce.png", dpi=300)
 
+# plotting the results of mergesort
 plt.figure(figsize=(8,6),facecolor='paleturquoise')
+plt.plot(input_sizes_mergesort,np.array(cpu_times_mergesort)/1e9, 'bo-', label = "MergeSort")
+plt.xlabel("Number of Nodes")
+plt.ylabel("Time (seconds)")
+plt.title("Merge Sort on Singly Linked List")
+plt.grid(True)
+plt.legend()
+
+plt.savefig("benchmark_plot_mergesort.png", dpi=300)
+
+# plotting the results of comparing bruteforce & mergesort
+plt.figure(figsize=(8,6),facecolor='thistle')
 plt.plot(input_sizes_mergesort,np.array(cpu_times_mergesort)/1e9, 'bo-', label = "MergeSort")
 plt.plot(input_sizes_bruteforce,np.array(cpu_times_bruteforce)/1e9, 'go-', label = "BruteForce")
 plt.xlabel("Number of Nodes")
@@ -48,7 +60,7 @@ plt.title("Merge Sort v. Brute Force Sort on Singly Linked List")
 plt.grid(True)
 plt.legend()
 
-plt.savefig("benchmark_plot_mergesort.png", dpi=300)
+plt.savefig("benchmark_plot_comparisons.png", dpi=300)
 
    
 

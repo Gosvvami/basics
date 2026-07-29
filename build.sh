@@ -43,13 +43,19 @@ cd ..
 BINPATH=./build/
 
 # Run benchmark with table output
-${BINPATH}basics
+# ${BINPATH}basics
+
+${BINPATH}basics \
+  --benchmark_out=results.json \
+  --benchmark_out_format=json
 
 # Save benchmark results as JSON
-${BINPATH}basics --benchmark_format=json > results.json
+#${BINPATH}basics --benchmark_format=json > results.json
 
 # generate plots from python script
+echo 'should have generated results.json!'
 python3 plots.py
+echo 'finished running plots.py'
 
 ### You are not supposed to run your code here. This is for compiling your code. Run your code with another script (run_...) and sbatch command
 

@@ -21,26 +21,21 @@ namespace goswaa4{
     Node* GenLinkedList(int size) {
 
         Node* head = &data_arr[0];
-        //Node* tail;
 
         for(int i = 0; i < size - 1; i++){
-            data_arr[i].data = rand()%100;
+            data_arr[i].data = rand();
             data_arr[i].next = &data_arr[i+1];
-    //         if (i == 0){
-    //         head = &data_arr[i];
         }
-    //        if (i == size - 2){
-                data_arr[size-1].data = rand()%100;
-                data_arr[size-1].next = nullptr;
-                //tail = &data_arr[size-1];
-    //        }
+
+        data_arr[size-1].data = rand();
+        data_arr[size-1].next = nullptr;
         
         return head;
     }
 
     void BruteForceSort(Node* head){
         Node* CurrPtr = head;
-        Node* IterPtr = head->next;
+        Node* IterPtr = CurrPtr->next;
 
         while(CurrPtr->next != nullptr){
  
