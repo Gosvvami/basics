@@ -31,7 +31,7 @@ Plots are attached below:
 ![Benchmark Results for Comparison](prev_gen_plots/benchmark_plot_comparisons.png)
 
 ### Project Assumptions
-* I used a static memory global Node* array for my Linked List as there were no DMA requirements for the given task.
+* I used a static memory global Node array for my Linked List as there were no DMA requirements for the given task.
 * I have used 'logn' as a simplification of log, base 2 of n.
 * I have the latest version of cmake, gcc, etc. To fix some dependency issues, I also updated the version of google benchmark used in the CMakeLists.txt v1.9.3 which resolved some cmake & googletest issues.
 * Rand() from cstdlib was used to generate values for my Linked List. While I am reasonably certain that my code can accommodate for negative integers, I did not test with negative integers. I do not believe that would have affected the execution of the algorithms in any way.

@@ -5,9 +5,11 @@
 
 namespace goswaa4{
 
+    // I declared a static memory Node Arr since the project did not specify any DMA requirements
     const int MAX_ARR = 100000;
     Node data_arr[MAX_ARR];
 
+    // Node constructors
     Node::Node(){
             data = 0;
             next = nullptr;
@@ -18,6 +20,7 @@ namespace goswaa4{
             next = nullptr;
         }
 
+    // Linked List generator function
     Node* GenLinkedList(int size) {
 
         Node* head = &data_arr[0];
@@ -33,6 +36,7 @@ namespace goswaa4{
         return head;
     }
 
+    // my brute force approach
     void BruteForceSort(Node* head){
         Node* CurrPtr = head;
         Node* IterPtr = CurrPtr->next;
@@ -52,6 +56,7 @@ namespace goswaa4{
         }
     }
 
+    // helper function for MergeSort()
     Node* SplitLinkedList(Node* head) {
 
         Node* FastPtr = head;
@@ -62,13 +67,14 @@ namespace goswaa4{
             SlowPtr = SlowPtr->next;
         }
 
-        // Cutting the linked list into two distinct linked lists
+        // cutting the linked list into two distinct linked lists
         Node* temp = SlowPtr->next;
         SlowPtr->next = nullptr;
 
         return temp;
     }
 
+    // helped function for MergeSort()
     Node* Merge(Node* one, Node* two){
         if(one == nullptr) return two;
         if(two == nullptr) return one;
@@ -83,6 +89,7 @@ namespace goswaa4{
         }
     }
 
+    // optimized sort function
     Node* MergeSort(Node* head){
 
         if(head == nullptr || head->next == nullptr){
