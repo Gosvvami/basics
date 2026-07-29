@@ -1,7 +1,7 @@
 # Linked List Implementation & Sorting
 Linked List Assignment (HW0) completed by Anushka Goswami on 07/29/2026 atop the basics repository.
 
-After cloning, cd moving to Basics, running 'bash build.sh' should automatically run everything and generate plots that will get saved to the Basics repository. Plots embedded in this README were generated previously through the same code and are saved in the folder prev_gen_plots.
+After cloning, cd moving to Basics, running 'bash build.sh' should automatically run everything and generate plots that will get saved to the Basics repository. Plots embedded in this README were generated previously through the same code and are saved in the folder prev_gen_plots. Results from the google benchmark tests get stored in results.json. This file should get rewritten each time the code gets executed through the build.sh script.
 
 ### Part A
 Linked List Implementation:
@@ -37,8 +37,6 @@ Plots are attached below:
 * Rand() from cstdlib was used to generate values for my Linked List. While I am reasonably certain that my code can accommodate for negative integers, I did not test with negative integers. I do not believe that would have affected the execution of the algorithms in any way.
 * I did not try to resolve any of the environmental package errors/dependency alerts/module alerts stemming from the parts of the code that I figured were aimed to be run through a teaching cluster.
 * Script for the plots is provided in plots.py within the basics repository. All plots will generate on running the build.sh shell script.
-* Results from the google benchmark tests get stored in results.json. This file should get rewritten each time the code gets executed through the build.sh script.
-
 
 ### Extra Notes & Miscellaneous Information
 
