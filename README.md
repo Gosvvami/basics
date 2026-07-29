@@ -37,6 +37,7 @@ Plots are attached below:
 * Rand() from cstdlib was used to generate values for my Linked List. While I am reasonably certain that my code can accommodate for negative integers, I did not test with negative integers. I do not believe that would have affected the execution of the algorithms in any way.
 * I did not try to resolve any of the environmental package errors/dependency alerts/module alerts stemming from the parts of the code that I figured were aimed to be run through a teaching cluster.
 * Script for the plots is provided in plots.py within the basics repository. All plots will generate on running the build.sh shell script.
+* Results from the google benchmark tests get stored in results.json. This file should get rewritten each time the code gets executed through the build.sh script.
 
 
 ### Extra Notes & Miscellaneous Information
